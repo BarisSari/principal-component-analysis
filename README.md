@@ -8,7 +8,7 @@ The lost datasets while applying PCA are not included the fundamental characteri
 We can evaluate the performance of a dimensionality reduction algorithm by computing the
 data loss, i. e. how much our data has changed with this algorithm.
 
-![alt text](https://raw.githubusercontent.com/barissari/principal-component-analysis/images/original-data.jpg)
+![alt text](https://github.com/BarisSari/principal-component-analysis/tree/master/images/original-data.jpg)
 
 When we check the figure above, it has seen obviously that PCA does not work very well
 for this data. Since there are only two dimensions in original data, it is not necessary to reduce the
@@ -29,4 +29,4 @@ numpy built-in function for this step.
 
 The result of the implemented PCA is as follows:
 
-![alt text](https://raw.githubusercontent.com/barissari/principal-component-analysis/images/data-after-pca.jpg)
+![alt text](https://github.com/BarisSari/principal-component-analysis/tree/master/images/data-after-pca.jpg)
