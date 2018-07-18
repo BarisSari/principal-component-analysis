@@ -16,6 +16,7 @@ dimension. There are two different classes and it’s very easy to label this tw
 data. However, it’s impossible to do that in transformed data.
 PCA may have many drawbacks. For instance, one of them is its performance in noisy
 datasets. It might give a bad results because it might choose the noisy variables to cover the all data.
+
 Implementation
 1. Parse the data, create two arrays, one has the features, e. g. dimensions, the other one
 has classes.
