@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 with open("data.txt", 'r') as file:
 	data = [line.split(',') for line in file.read().split("\n") if line]
 
+number_of_rows = len(data)
 # Arrange the data type
 data = np.array(data)
 X, Y = data[:, :64], data[:, -1]
@@ -48,9 +49,9 @@ fig = plt.figure(figsize=(8, 4))
 plt.plot(transformed[0, :], transformed[1, :], 'o', markersize=1, color='blue', alpha=0.3)
 # write class labels of random 200 data points
 for i in range(200):
-    index = np.random.randint(0, 3823)
-    cls = Y[index]
-    plt.text(transformed[0][index], transformed[1][index], '%d' % cls, fontsize=8)
+    index = np.random.randint(0, number_of_rows)
+    class_ = Y[index]
+    plt.text(transformed[0][index], transformed[1][index], f"{class_}", fontsize=8)
 
 plt.xlim([40, -40])
 plt.ylim([-40, 30])
