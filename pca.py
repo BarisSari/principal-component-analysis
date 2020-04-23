@@ -1,4 +1,4 @@
-'''  Developed by Bayram Baris Sari
+"""  Developed by Bayram Baris Sari
 *   E-mail: bayrambariss@gmail.com
 *   Tel No: +90 539 593 7501    
 *
@@ -7,26 +7,20 @@
 *   
 *   It decreases 64 dimensions to 2 dimensions
 *   It finds 2 biggest eigenvector matrices
-'''
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # Parse the data, there are 64 dimensions.x holds this features and y holds the classes
-x = []
-y = []
-file = open("data.txt", 'r')
-data = [line.strip('\n').split(',') for line in file.readlines()]
-for row in data:
-    if row:
-        x.append(row[0:64])
-        y.append(row[64:])
-file.close()
+with open("data.txt", 'r') as file:
+	data = [line.split(',') for line in file.read().split("\n") if line]
 
 # Arrange the data type
-X = np.array(x)
+data = np.array(data)
+X, Y = data[:, :64], data[:, -1]
 X = X.astype(np.float32)
-Y = np.array(y)
 Y = Y.astype(np.int)
 
 # Calculate covarience matrix
